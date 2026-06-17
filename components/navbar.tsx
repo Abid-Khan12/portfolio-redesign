@@ -126,8 +126,8 @@ function Navbar() {
                   key={label}
                   href={href}
                   className={cn(
-                    "group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-zinc-700 px-4 py-1.5 text-sm font-medium text-foreground duration-100 hover:text-zinc-900",
-                    { "text-zinc-900 border-border": isActive },
+                    "group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-zinc-700 px-4 py-1.5 lg:text-sm text-xs font-medium",
+                    { "text-white border-border": isActive },
                   )}
                 >
                   {/* The text needs to be high z-index so it stays visible above the rising boxes */}
@@ -138,7 +138,7 @@ function Navbar() {
                     {/* Box 1: Fastest/First */}
                     <span
                       className={cn(
-                        "h-0 w-1/3 bg-white transition-all duration-150 ease-out group-hover:h-full",
+                        "h-0 w-1/3 bg-emerald-500/80 transition-all duration-150 ease-out group-hover:h-full",
                         { "h-full": isActive },
                       )}
                     />
@@ -146,7 +146,7 @@ function Navbar() {
                     {/* Box 2: Mid speed / slight delay */}
                     <span
                       className={cn(
-                        "h-0 w-1/3 bg-white transition-all duration-200 delay-75 ease-out group-hover:h-full", // Note: duration-250 is not standard Tailwind, adjusted to 200
+                        "h-0 w-1/3 bg-emerald-500/80 transition-all duration-200 delay-75 ease-out group-hover:h-full", // Note: duration-250 is not standard Tailwind, adjusted to 200
                         { "h-full": isActive },
                       )}
                     />
@@ -154,7 +154,7 @@ function Navbar() {
                     {/* Box 3: Slowest / seals the deal */}
                     <span
                       className={cn(
-                        "h-0 w-1/4 grow bg-white transition-all duration-300 delay-100 ease-out group-hover:h-full", // Note: duration-400 is not standard Tailwind, adjusted to 300
+                        "h-0 w-1/4 grow bg-emerald-500/80 transition-all duration-300 delay-100 ease-out group-hover:h-full", // Note: duration-400 is not standard Tailwind, adjusted to 300
                         { "h-full": isActive },
                       )}
                     />
@@ -163,13 +163,13 @@ function Navbar() {
               );
             })}
           </div>
-          <div className="flex items-center lg:gap-5 gap-2.5">
+          <div className="flex items-center lg:gap-5 gap-2">
             {socialLinks.map(({ href, icon: Icon }, i) => (
               <Link
                 key={i}
                 href={href}
                 target="_blank"
-                className="[&>svg]:fill-white/70 [&>svg]:hover:fill-white"
+                className="[&>svg]:fill-white/70 [&>svg]:hover:fill-emerald-500 [&>svg]:transition-colors"
               >
                 <Icon />
               </Link>

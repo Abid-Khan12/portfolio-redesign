@@ -25,9 +25,9 @@
 
 @layer base {
   * {
-    @apply scrollbar-thin box-border;
+    @apply scrollbar-thin box-border selection:bg-emerald-500/30;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-mono;
   }
 }

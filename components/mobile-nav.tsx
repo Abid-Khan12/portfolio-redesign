@@ -71,8 +71,8 @@ function MobileNav({ currentHash }: { currentHash: string }) {
         if (!isOpen) setIsOpen(true);
       }}
       className={cn(
-        "md:hidden fixed top-4 left-4 h-14 bg-zinc-900 border border-zinc-800 rounded-full z-50 shadow-lg",
-        "flex items-center overflow-hidden p-1 select-none max-w-sm",
+        "md:hidden fixed min-[321px]:top-4 top-2 left-4 h-10 bg-zinc-900 border border-zinc-800 rounded-full z-50 shadow-lg",
+        "flex items-center overflow-hidden p-1 ps-2 select-none max-w-sm",
         !isOpen && "cursor-pointer",
       )}
     >
@@ -86,7 +86,7 @@ function MobileNav({ currentHash }: { currentHash: string }) {
               setIsOpen(false);
             }
           }}
-          className="size-12 flex items-center justify-center rounded-full text-zinc-400 hover:text-zinc-100 transition-colors shrink-0 z-10 cursor-pointer"
+          className="size-10 flex items-center justify-center rounded-full text-zinc-400 hover:text-zinc-100 transition-colors shrink-0 z-10 cursor-pointer"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
         >
@@ -115,7 +115,7 @@ function MobileNav({ currentHash }: { currentHash: string }) {
                 key={i}
                 href={href}
                 className={cn(
-                  "relative flex items-center justify-center size-10 rounded-full text-zinc-400 transition-colors duration-200",
+                  "relative flex items-center justify-center size-8 rounded-full text-zinc-400 transition-colors duration-200",
                   {
                     "text-zinc-900": isActive,
                   },

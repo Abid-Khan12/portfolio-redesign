@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/spotlight";
 import { motion } from "motion/react";
+import { PointerHighlight } from "./ui/pointer-highlighter";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -26,7 +27,7 @@ const itemVariants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-165 w-full flex items-center justify-center overflow-hidden transition-colors duration-300 px-4">
+    <section className="relative min-h-175 w-full flex items-center justify-center overflow-hidden transition-colors duration-300 px-4">
       {/* Grid Background */}
       <div
         className={cn(
@@ -47,7 +48,7 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 flex flex-col items-start text-left max-w-4xl font-mono selection:bg-emerald-500/30"
+        className="relative z-10 flex flex-col items-start text-left max-w-4xl font-mono"
       >
         <motion.div
           variants={itemVariants}
@@ -72,26 +73,24 @@ export default function Hero() {
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white flex flex-wrap items-baseline gap-x-4 gap-y-3"
         >
           <span>Hey, I'm</span>
-          <span className="relative inline-block px-3 py-1 rounded-lg border border-neutral-800 bg-neutral-900/40 text-neutral-100 shadow-[0_0_30px_rgba(16,185,129,0.05)]">
-            Abid
-          </span>
+          <span className="sm:ps-2">Abid</span>
         </motion.h1>
 
         <motion.h2
           variants={itemVariants}
-          className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-neutral-200 mt-4 flex flex-wrap items-center gap-x-3 gap-y-1"
+          className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight mt-4 flex flex-wrap items-center gap-x-3 gap-y-1"
         >
           <span>Frontend</span>
-          <span className="px-2 py-0.5 rounded border border-neutral-700 bg-transparent text-neutral-300 text-xl sm:text-2xl md:text-3xl font-medium">
-            Developer
-          </span>
+          <PointerHighlight pointerClassName="fill-emerald-500 stroke-emerald-500">
+            <span className="px-2">Developer</span>
+          </PointerHighlight>
         </motion.h2>
 
         <motion.div
           variants={itemVariants}
           className="mt-8 flex flex-col gap-4 text-base sm:text-lg max-w-2xl tracking-wide font-mono"
         >
-          <p className="text-neutral-200 text-lg sm:text-xl font-medium border-l-2 border-emerald-500 pl-4 py-1">
+          <p className="text-lg sm:text-xl font-medium border-l-2 border-emerald-500 pl-4 py-1">
             Frontend Developer transforming designs into highly performant web
             applications.
           </p>
