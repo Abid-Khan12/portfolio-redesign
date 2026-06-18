@@ -1,9 +1,9 @@
 "use client";
+import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/spotlight";
-import { motion } from "motion/react";
-import { PointerHighlight } from "./ui/pointer-highlighter";
+import { PointerHighlight } from "@/components/ui/pointer-highlighter";
 
 const containerVariants = {
    hidden: { opacity: 0 },

@@ -1,21 +1,24 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { type ProjectData } from "@/types/type";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
+import { GithubIcon } from "@/data/icons";
 import { ArrowLeft, ExternalLinkIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { GithubIcon } from "@/components/navbar";
+
+import { ShootingStars } from "@/components/ui/shooting-star";
+import { StarsBackground } from "@/components/ui/star-background";
 
 function ProjectDetailSection({ project }: { project: ProjectData }) {
    const router = useRouter();
    return (
       <section className="space-y-10">
          <button
-            className="group w-fit px-4 py-2 text-sm inline-flex items-center justify-center gap-2 bg-background/50 border border-zinc-500 hover:bg-background hover:border-zinc-700 rounded-lg transition-colors duration-100 cursor-pointer"
+            className="group w-fit px-4 py-2 text-sm inline-flex items-center justify-center gap-2 cursor-pointer"
             onClick={() => router.back()}
          >
             <ArrowLeft className="size-4 group-hover:-translate-x-1 transition-transform" />
@@ -156,6 +159,8 @@ function ProjectDetailSection({ project }: { project: ProjectData }) {
                </div>
             </div>
          </div>
+         <ShootingStars />
+         <StarsBackground />
       </section>
    );
 }

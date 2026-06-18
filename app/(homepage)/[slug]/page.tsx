@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 
 import { Projects } from "@/data/data";
 
-import ProjectDetailSection from "@/components/project-detail-section";
+import ProjectDetailSection from "@/components/sections/project-detail-section";
+
 
 async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
    const { slug } = await params;

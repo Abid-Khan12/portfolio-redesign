@@ -14,3 +14,8 @@ export interface ProjectData {
    githubUrl: string;
    isActive: boolean;
 }
+
+export interface SkillItem {
+   name: string;
+   icon: React.ComponentType<React.SVGProps<SVGSVGElement>> | string;
+}

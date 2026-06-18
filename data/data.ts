@@ -1,8 +1,21 @@
-import { type ProjectData } from "@/types/type";
+import type { SkillItem, ProjectData } from "@/types/type";
 
 import ProjectImage1 from "@/public/project-image1.png";
 import ProjectImage2 from "@/public/project-image2.png";
 import ProjectImage3 from "@/public/project-image3.png";
+import {
+   CssIcon,
+   FramerMotionIcon,
+   HtmlIcon,
+   JavaScriptIcon,
+   NextJsIcon,
+   ReactIcon,
+   ShadcnIcon,
+   TailwindCssIcon,
+   TanStackQueryIcon,
+   TypeScriptIcon,
+   ZustandIcon,
+} from "@/data/icons";
 
 export const Projects: ProjectData[] = [
    {
@@ -100,4 +113,18 @@ export const Projects: ProjectData[] = [
       githubUrl: "https://github.com/Abid-Khan12/Positivus",
       isActive: true,
    },
+];
+
+export const Skills: SkillItem[] = [
+   { name: "HTML5", icon: HtmlIcon },
+   { name: "CSS3", icon: CssIcon },
+   { name: "JavaScript", icon: JavaScriptIcon },
+   { name: "TypeScript", icon: TypeScriptIcon },
+   { name: "React", icon: ReactIcon },
+   { name: "Next.js", icon: NextJsIcon },
+   { name: "Tailwind CSS", icon: TailwindCssIcon },
+   { name: "shadcn/ui", icon: ShadcnIcon },
+   { name: "Framer Motion", icon: FramerMotionIcon },
+   { name: "Zustand", icon: ZustandIcon },
+   { name: "React Query", icon: TanStackQueryIcon },
 ];
