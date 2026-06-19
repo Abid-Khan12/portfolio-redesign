@@ -141,9 +141,9 @@ function ProjectDetailSection({ project }: { project: ProjectData }) {
                         <Link
                            href={project.githubUrl}
                            target="_blank"
-                           className="flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-900 p-3 transition-colors hover:border-zinc-700 text-neutral-400 hover:bg-zinc-800 [&>svg]:fill-neutral-400"
+                           className="flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-900 p-3 transition-colors hover:border-zinc-700 text-neutral-400 hover:bg-zinc-800"
                         >
-                           <GithubIcon />
+                           <GithubIcon className="fill-neutral-400 size-6" />
                            View Source Code
                         </Link>
                         <Link
@@ -151,7 +151,7 @@ function ProjectDetailSection({ project }: { project: ProjectData }) {
                            target="_blank"
                            className="flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-900 p-3 transition-colors hover:border-zinc-700 text-neutral-400 hover:bg-zinc-800"
                         >
-                           <ExternalLinkIcon />
+                           <ExternalLinkIcon className="size-5.5" />
                            View Source Code
                         </Link>
                      </div>

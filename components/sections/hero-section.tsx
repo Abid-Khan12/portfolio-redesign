@@ -25,7 +25,7 @@ const itemVariants = {
    },
 } as const;
 
-export default function Hero() {
+export default function HeroSection() {
    return (
       <section className="relative min-h-175 w-full flex items-center justify-center overflow-hidden transition-colors duration-300 px-4">
          {/* Grid Background */}
@@ -74,7 +74,7 @@ export default function Hero() {
             >
                <span>Hey, I'm</span>
                <PointerHighlight pointerClassName="fill-emerald-500 stroke-emerald-500">
-                  <span className="sm:px-2">Abid</span>
+                  <span className="sm:px-2 px-1">Abid</span>
                </PointerHighlight>
             </motion.h1>
 

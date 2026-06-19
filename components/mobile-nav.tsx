@@ -11,7 +11,7 @@ const mobileNavLinks = [
    { href: "#projects", label: "Projects", icon: BriefcaseBusiness },
    { href: "#experience", label: "Experience", icon: GraduationCap },
    { href: "#about", label: "About", icon: User },
-   { href: "#contact", label: "Contact", icon: Mail },
+  //  { href: "#contact", label: "Contact", icon: Mail },
 ];
 
 // Master layout animation configuration

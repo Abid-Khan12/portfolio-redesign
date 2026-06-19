@@ -13,12 +13,12 @@ function SkillSection() {
                Technologies I rely on to build smooth, clean interfaces.
             </p>
          </div>
-         <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
+         <div className="grid lg:grid-cols-4 md:grid-cols-3 min-[425px]:grid-cols-2  md:gap-10 gap-5">
             {Skills.map(({ icon: Icon, name }) => (
                <CometCard key={name}>
-                  <div className="group flex w-full items-center max-sm:justify-center gap-4 rounded-xl p-4 transition-all duration-300 hover:bg-zinc-900/30">
+                  <div className="group flex w-full items-center max-[425px]:justify-center max-[425px]:flex-col md:gap-4 gap-2 rounded-xl p-4 transition-all duration-300 hover:bg-zinc-900/30">
                      <Icon />
-                     <h3 className="text-base font-medium text-zinc-100 truncate group-hover:text-zinc-50">
+                     <h3 className="md:text-base text-sm font-medium text-zinc-100 truncate group-hover:text-zinc-50">
                         {name}
                      </h3>
                   </div>

@@ -1,9 +1,12 @@
 "use client";
-import { FollowerPointerCard } from "@/components/ui/following-pointer";
-import { ProjectData } from "@/types/type";
+import { useRouter } from "next/navigation";
+import { type ProjectData } from "@/types/type";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+
+import Avatar from "@/public/avatar.png";
+
+import { FollowerPointerCard } from "@/components/ui/following-pointer";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -92,7 +95,14 @@ function ProjectCard({ project }: ProjectCardProps) {
 
 const TitleComponent = ({ title }: { title: string }) => (
    <div className="flex items-center space-x-2">
-      <p className="text-sm font-medium text-white">{title}</p>
+      <Image
+         src={Avatar}
+         alt="avatat"
+         className="size-7 rounded-full border border-white"
+         width={30}
+         height={30}
+      />
+      <p className="font-medium text-sm">{title}</p>
    </div>
 );
 

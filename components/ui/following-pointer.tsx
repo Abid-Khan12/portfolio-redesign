@@ -120,7 +120,7 @@ export const FollowPointer = ({
 
          <motion.div
             style={{ backgroundColor: colorRef.current }}
-            className="min-w-max rounded-md px-2 py-1 text-xs whitespace-nowrap text-white font-medium shadow-md -translate-x-1"
+            className="min-w-max px-3 py-1.5 text-xs whitespace-nowrap text-white font-medium shadow-md -translate-x-1 rounded-full"
          >
             {title || `Project`}
          </motion.div>

@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
-import { GithubIcon, LinkedInIcon, XIcon } from "@/data/icons";
-import { CircleUser } from "lucide-react";
+import Avatar from "@/public/avatar.png";
 
 import { useHash } from "@/hooks/use-hash";
 import { cn } from "@/lib/utils";
 
 import MobileNav from "./mobile-nav";
+import { socialLinks } from "@/data/data";
 
 const navLinks = [
    {
@@ -31,25 +32,10 @@ const navLinks = [
       href: "#about",
       label: "About",
    },
-   {
-      href: "#contact",
-      label: "Contact",
-   },
-];
-
-const socialLinks = [
-   {
-      href: "#",
-      icon: XIcon,
-   },
-   {
-      href: "#",
-      icon: LinkedInIcon,
-   },
-   {
-      href: "#",
-      icon: GithubIcon,
-   },
+   //  {
+   //     href: "#contact",
+   //     label: "Contact",
+   //  },
 ];
 
 function Navbar() {
@@ -68,7 +54,14 @@ function Navbar() {
                   href={"/"}
                   className="flex items-center gap-2"
                >
-                  <CircleUser className="lg:size-10 size-8" />
+                  <Image
+                     src={Avatar}
+                     className="lg:size-10 size-8 object-cover rounded-full"
+                     alt="logo"
+                     width={40}
+                     height={40}
+                     priority
+                  />
                   <span className="font-semibold lg:text-base text-sm text-nowrap">Abid Khan</span>
                </Link>
                <div className="flex items-center gap-2">
@@ -117,17 +110,21 @@ function Navbar() {
                      );
                   })}
                </div>
-               <div className="flex items-center lg:gap-5 gap-2">
-                  {socialLinks.map(({ href, icon: Icon }, i) => (
-                     <Link
-                        key={i}
-                        href={href}
-                        target="_blank"
-                        className="[&>svg]:fill-white/70 [&>svg]:hover:fill-emerald-500 [&>svg]:transition-colors"
-                     >
-                        <Icon />
-                     </Link>
-                  ))}
+               <div className="flex items-center gap-2">
+                  {socialLinks.map((social, idx) => {
+                     const Icon = social.icon;
+                     return (
+                        <Link
+                           key={`footer-social-${idx}`}
+                           href={social.href}
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="p-2 rounded-lg border border-neutral-800 bg-zinc-900/40 text-neutral-400 hover:text-emerald-400 hover:bg-zinc-900 hover:border-neutral-700 transition-all duration-150"
+                        >
+                           <Icon className="h-4 w-4" />
+                        </Link>
+                     );
+                  })}
                </div>
             </nav>
          </header>

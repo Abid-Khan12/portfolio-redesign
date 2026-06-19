@@ -1,4 +1,4 @@
-import type { SkillItem, ProjectData } from "@/types/type";
+import type { SkillItem, ProjectData, BioSection, TimelineEntry } from "@/types/type";
 
 import ProjectImage1 from "@/public/project-image1.png";
 import ProjectImage2 from "@/public/project-image2.png";
@@ -6,14 +6,17 @@ import ProjectImage3 from "@/public/project-image3.png";
 import {
    CssIcon,
    FramerMotionIcon,
+   GithubIcon,
    HtmlIcon,
    JavaScriptIcon,
+   LinkedInIcon,
    NextJsIcon,
    ReactIcon,
    ShadcnIcon,
    TailwindCssIcon,
    TanStackQueryIcon,
    TypeScriptIcon,
+   XIcon,
    ZustandIcon,
 } from "@/data/icons";
 
@@ -127,4 +130,111 @@ export const Skills: SkillItem[] = [
    { name: "Framer Motion", icon: FramerMotionIcon },
    { name: "Zustand", icon: ZustandIcon },
    { name: "React Query", icon: TanStackQueryIcon },
+];
+
+export const ProfessionalRoles: string[] = [
+   "FRONTEND DEVELOPER",
+   "UI/UX ENGINEER",
+   "WEB TRENDS RESEARCHER",
+];
+
+export const HeaderBadges: string[] = [
+   "React",
+   "Next.js",
+   "TypeScript",
+   "Tailwind CSS",
+   "shadcn/ui",
+   "Zustand",
+   "React Query",
+];
+
+export const PortfolioBio: BioSection[] = [
+   {
+      id: "who_i_am",
+      title: "Who I Am",
+      content:
+         "Hello! I'm a frontend developer focused on building responsive, modern applications that bring clear interfaces to life. I emphasize performance optimization, cross-browser stability, and keeping the core user flow incredibly simple and intuitive.",
+   },
+   {
+      id: "what_i_do",
+      title: "What I Do",
+      content:
+         "I design and build lightweight, interactive frontend architectures. My goal is always to deliver pixel-perfect user experiences—less unnecessary complexity, more fluid engineering and stable, highly responsive products that scale effortlessly.",
+   },
+   {
+      id: "my_journey",
+      title: "My Journey",
+      content:
+         "I have dedicated my work to translating complex concepts into clean code layouts. From building highly scalable global state systems to designing sleek, dynamic component interactions using Framer Motion, I specialize in bringing high-fidelity designs into functional web reality.",
+   },
+   {
+      id: "vision",
+      title: "Vision",
+      content:
+         "Web development should be fluid, fast, and accessible. I strive to stay at the absolute forefront of modern frontend trends, creating intuitive systems where code architecture and high-end design perfectly align.",
+   },
+   {
+      id: "beyond_code",
+      title: "Beyond Code",
+      content:
+         "When I am not debugging layouts or profiling rendering performance, I am usually looking out for clean aesthetic design details, learning new web engineering patterns, or exploring modern UI design assets to push my front-end limits.",
+   },
+];
+
+export const timelineData: TimelineEntry[] = [
+   {
+      title: "2024 - Present",
+      role: "Founding Engineer • Freelance & Startup Ventures",
+      subtitle: "Building High-Performance SaaS Applications",
+      location: "Remote / Independent Project Cycles",
+      iconType: "shield",
+      isCurrent: true,
+      accomplishments: [
+         "Designing ultra-clean interfaces keeping core business user flows incredibly fast, simple, and responsive.",
+         "Integrating AI automation capabilities utilizing the Gemini AI API pipelines for intelligent text-to-invoice parsing modules.",
+         "Architecting safe client routing guardrails and session management ecosystems with Clerk authentication middleware.",
+      ],
+      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Zustand"],
+   },
+   {
+      title: "2024 - 2025",
+      role: "Frontend Developer Intern",
+      subtitle: "Enterprise Web Solutions & Performance Optimization",
+      location: "Collaborative Engineering Teams",
+      iconType: "code",
+      accomplishments: [
+         "Assisted in building complex production code setups using vanilla JavaScript and basic React component matrices.",
+         "Tested responsive layouts across multiple desktop and mobile viewpoints to maintain uniform styles and cross-browser stability.",
+         "Refactored utility CSS parameters to remove absolute pixel boundaries, drastically accelerating visual loading weights.",
+      ],
+      skills: ["JavaScript", "React", "HTML5", "CSS3", "REST APIs", "Git"],
+   },
+   {
+      title: "2023 - 2024",
+      role: "Full-Stack Software Engineering Student",
+      subtitle: "Saylani Mass IT Training (SMIT)",
+      location: "Rigorous Foundations & Architecture Program",
+      iconType: "edu",
+      accomplishments: [
+         "Mastered foundational programming paradigms with explicit training on structural JavaScript (ES6+), data flows, and algorithms.",
+         "Built end-to-end full stack web platforms modeling complex backends using Express.js schemas and MongoDB collections.",
+         "Gained deep production-readiness expertise including cloud deployment strategies, API routing designs, and state management.",
+      ],
+      skills: ["MERN Stack", "MongoDB", "Express.js", "Node.js", "JavaScript", "CSS Grid"],
+   },
+];
+
+export const socialLinks = [
+   {
+      href: "https://x.com/Abid_Dev_X",
+      icon: XIcon,
+   },
+   {
+      href: "https://www.linkedin.com/in/abid-shah-khan",
+      icon: LinkedInIcon,
+   },
+   {
+      href: "https://github.com/Abid-Khan12",
+      icon: GithubIcon,
+   },
 ];
