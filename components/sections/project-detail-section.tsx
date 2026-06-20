@@ -18,7 +18,7 @@ function ProjectDetailSection({ project }: { project: ProjectData }) {
    return (
       <section className="space-y-10">
          <button
-            className="group w-fit px-4 py-2 text-sm inline-flex items-center justify-center gap-2 cursor-pointer"
+            className="group w-fit md:px-4 py-2 text-sm inline-flex items-center justify-center gap-2 cursor-pointer"
             onClick={() => router.back()}
          >
             <ArrowLeft className="size-4 group-hover:-translate-x-1 transition-transform" />
