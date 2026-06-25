@@ -18,23 +18,23 @@ function ProjectDetailSection({ project }: { project: ProjectData }) {
    return (
       <section className="space-y-10">
          <button
-            className="group w-fit md:px-4 py-2 text-sm inline-flex items-center justify-center gap-2 cursor-pointer"
+            className="group w-fit py-2 mt-2 text-sm inline-flex items-center justify-center gap-2 cursor-pointer"
             onClick={() => router.back()}
          >
             <ArrowLeft className="size-4 group-hover:-translate-x-1 transition-transform" />
             Back to projects
          </button>
          <div className="flex flex-col gap-6">
-            <div className="flex md:items-center items-start justify-between">
+            <div className="flex md:items-center items-start sm:justify-between justify-end sm:flex-nowrap flex-wrap-reverse sm:gap-0 gap-y-2.5">
                <div className="flex flex-col gap-2">
                   <h1 className="font-bold md:text-5xl text-4xl">{project.title}</h1>
-                  <p className="md:text-lg font-semibold text-neutral-400 max-md:leading-6">
+                  <p className="md:text-lg font-semibold text-neutral-400 max-md:leading-6 sm:max-w-3xl">
                      {project.subTitle}
                   </p>
                </div>
                <span
                   className={cn(
-                     "px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider backdrop-blur-md border inline-flex items-center gap-1.5 shadow-sm max-md:mt-2",
+                     "px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider backdrop-blur-md border inline-flex items-center gap-1.5 shadow-sm md:mt-2",
                      project.isActive
                         ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
                         : "bg-amber-500/10 text-amber-500 border-amber-500/20",

@@ -3,6 +3,8 @@ import type { SkillItem, ProjectData, BioSection, TimelineEntry } from "@/types/
 import ProjectImage1 from "@/public/project-image1.png";
 import ProjectImage2 from "@/public/project-image2.png";
 import ProjectImage3 from "@/public/project-image3.png";
+import ProjectImage4 from "@/public/project-image4.png";
+
 import {
    CssIcon,
    FramerMotionIcon,
@@ -114,6 +116,36 @@ export const Projects: ProjectData[] = [
       tags: ["UI/UX", "Tailwind CSS", "TypeScript"],
       visitUrl: "https://positivus-rho-nine.vercel.app",
       githubUrl: "https://github.com/Abid-Khan12/Positivus",
+      isActive: true,
+   },
+   {
+      slug: "resumelens_ai",
+      title: "ResumeLens AI",
+      subTitle:
+         "An AI-powered resume analyzer platform focused on helping candidates build ATS-friendly resumes.",
+      description:
+         "A modern SaaS-inspired frontend experience designed for students, fresh graduates, and job seekers. ResumeLens AI aims to simplify resume optimization through ATS scoring, actionable feedback, and AI-powered recommendations. The current version showcases the landing page, authentication flow, and overall product experience while core analysis features remain in development.",
+      features: [
+         "Modern SaaS landing page with polished user experience",
+         "Responsive authentication flows with form validation",
+         "Clean, conversion-focused design tailored for job seekers",
+         "Smooth animations and micro-interactions using Motion",
+         "Scalable component architecture for future platform growth",
+         "Strong design foundation for ATS analysis and AI-powered features",
+      ],
+      learningOutcomes: [
+         "Building production-ready SaaS frontend architectures",
+         "Advanced form validation using React Hook Form and Zod",
+         "Creating responsive and accessible user interfaces",
+         "Implementing smooth animations and engaging user experiences",
+         "Designing scalable component systems for future development",
+         "Planning and structuring AI-powered product workflows",
+      ],
+      techStack: ["React", "Tailwind CSS", "React Hook Form", "Zod", "Motion", "TypeScript"],
+      image: ProjectImage4,
+      tags: ["SaaS", "AI", "Resume Analyzer"],
+      visitUrl: "https://resume-lens-ai-ten.vercel.app/",
+      githubUrl: "https://github.com/Abid-Khan12/ResumeLens_AI",
       isActive: true,
    },
 ];

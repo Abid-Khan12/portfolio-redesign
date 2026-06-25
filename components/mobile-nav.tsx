@@ -11,7 +11,7 @@ const mobileNavLinks = [
    { href: "#projects", label: "Projects", icon: BriefcaseBusiness },
    { href: "#experience", label: "Experience", icon: GraduationCap },
    { href: "#about", label: "About", icon: User },
-  //  { href: "#contact", label: "Contact", icon: Mail },
+   //  { href: "#contact", label: "Contact", icon: Mail },
 ];
 
 // Master layout animation configuration
@@ -63,7 +63,7 @@ function MobileNav({ currentHash }: { currentHash: string }) {
             if (!isOpen) setIsOpen(true);
          }}
          className={cn(
-            "md:hidden fixed min-[321px]:top-4 top-2 left-4 h-10 bg-zinc-900 border border-zinc-800 rounded-full z-50 shadow-lg",
+            "md:hidden fixed min-[321px]:top-4 top-2 left-4 h-11 bg-zinc-900 border border-zinc-800 rounded-full z-50 shadow-lg",
             "flex items-center overflow-hidden p-1 ps-2 select-none max-w-sm",
             !isOpen && "cursor-pointer",
          )}
